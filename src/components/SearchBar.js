@@ -5,6 +5,10 @@ import {connect} from 'react-redux'
 import {BUSCAR_VIDEO} from '../store/actions/busca-videos' 
 
 class SearchBar extends Component {
+    constructor(props){
+        super(props)
+        this.props.BUSCAR_VIDEO('caio')
+    }
 
     handleChange = (e) => {
         if (e.keyCode === 13) {  

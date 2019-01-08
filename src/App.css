@@ -18,5 +18,18 @@
 
 .video-list{
   grid-area: video-list;
-  background-color: darkkhaki; 
+  background-color: #FFFACD; 
+  
+  padding: 15px
+}
+
+.video-titulo{
+  padding: 10px;
+  font-weight: 600;
+  color: #468284;
+}
+
+.video-descricao{
+    padding:10px;
+    color:#0000CD;
 }
