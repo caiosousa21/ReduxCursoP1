@@ -1,4 +1,4 @@
-import { BUSCAR_VIDEO, BUSCAR_VIDEO_SUCESSO, BUSCAR_VIDEO_FALHA } from "../actions/busca-videos";
+import { INICIO_BUSCA, BUSCAR_VIDEO_SUCESSO, BUSCAR_VIDEO_FALHA } from "../actions/busca-videos";
 
 const initialState = {
     videos: [],
@@ -8,25 +8,25 @@ const initialState = {
 
 export default function busca(state = initialState, action) {
     switch (action.type) {
-        case BUSCAR_VIDEO:
+        case 'INICIO_BUSCA':
             return {
-                videos: [],
+                ...state,
                 carregando: true,
-                erro: false,
             }
-        case BUSCAR_VIDEO_SUCESSO:
+        case 'BUSCAR_VIDEO_SUCESSO':
             return {
-                videos: action.videos,
                 carregando: false,
+                videos: action.videos,
                 erro: false,
             }
-        case BUSCAR_VIDEO_FALHA:
+        case 'BUSCAR_VIDEO_FALHA':
             return {
                 videos: [],
                 carregando: false,
                 erro: true,
             }
         default:
+            console.log(action.type)
             return state
     }
 }
