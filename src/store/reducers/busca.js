@@ -1,5 +1,3 @@
-import { INICIO_BUSCA, BUSCAR_VIDEO_SUCESSO, BUSCAR_VIDEO_FALHA } from "../actions/busca-videos";
-
 const initialState = {
     videos: [],
     carregando: false,
